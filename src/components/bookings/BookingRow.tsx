@@ -46,7 +46,7 @@ const BookingRow: React.FC<BookingsDataProps> = ({
             {" "}
             {isToday(new Date(startDate))
               ? "Today"
-              : formatDistanceFromNow(startDate)}{" "}
+              : formatDistanceFromNow(format(startDate, "MMM dd YYYY"))}{" "}
             &rarr; {numNights} night stay
           </p>
           <p className="text-gray-500">
