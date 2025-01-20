@@ -37,6 +37,7 @@ function UpdatePasswordForm() {
           <Input
             id="password"
             type="password"
+            placeholder="Enter new password"
             {...register("password", {
               required: "Password is required",
               minLength: {
@@ -60,6 +61,7 @@ function UpdatePasswordForm() {
           <Input
             id="passwordConfirm"
             type="password"
+            placeholder="Confirm password"
             {...register("passwordConfirm", {
               required: "Please confirm your password",
               validate: (value) =>

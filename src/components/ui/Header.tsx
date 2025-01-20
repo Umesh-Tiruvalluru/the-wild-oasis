@@ -3,6 +3,7 @@ import Logout from "../authentication/Logout";
 import useUser from "../authentication/useUser";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import { ModeToggle } from "../Toggler";
+import { SidebarTrigger } from "./sidebar";
 
 function Header() {
   const { user } = useUser();
@@ -11,11 +12,11 @@ function Header() {
   return (
     <div className="border-b px-8 dark:border-zinc-800 border-gray-100 py-4 mb-5">
       <ul className="flex justify-end items-center gap-4">
-        <li></li>
         <li
           onClick={() => navigate("/account")}
-          className="flex flex-row gap-2 items-center font-semibold cursor-pointer"
+          className="flex flex-row gap-2 items-center font-semibold cursor-pointer justify-between"
         >
+          <SidebarTrigger className="block lg:hidden" />
           <Avatar>
             <AvatarImage src={avatar} alt="@shadcn" />
             <AvatarFallback className="font-bold">CN</AvatarFallback>

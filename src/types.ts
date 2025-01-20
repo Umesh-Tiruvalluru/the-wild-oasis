@@ -75,3 +75,12 @@ export type TagNameStylesProps = {
 export type CheckoutButtonProps = {
   bookingId: string | number;
 };
+
+// New User
+
+export type SignUpFormInputs = {
+  fullName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+};

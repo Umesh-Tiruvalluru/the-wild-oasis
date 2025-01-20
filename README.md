@@ -1,50 +1,105 @@
-# React + TypeScript + Vite
+# The Wild Oasis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Wild Oasis is a hotel management system designed to streamline daily operations for hotel employees. This modern, full-stack application provides an intuitive interface for managing cabins, bookings, and guest data while offering analytics about the hotel's performance.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Secure Authentication System**
 
-## Expanding the ESLint configuration
+  - Employee-only access with protected routes
+  - In-app user registration for hotel staff
+  - Customizable user profiles with avatar support
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Comprehensive Cabin Management**
 
-- Configure the top-level `parserOptions` property like this:
+  - Dynamic table view of all cabins with details
+  - CRUD operations for cabin management
+  - Photo upload capability for cabin listings
+  - Flexible pricing and discount management
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Advanced Booking System**
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+  - Complete booking overview with filtering capabilities
+  - Check-in/check-out functionality
+  - Integrated payment confirmation system
+  - Breakfast add-on option during stay
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Smart Dashboard**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+  - Custom charts for sales analysis (total vs extras)
+  - Stay duration statistics
+  - Real-time occupancy rates
+  - Daily check-in/check-out lists
+  - 7/30/90-day booking insights
+
+- **Additional Features**
+  - Dark mode support
+  - Customizable application settings
+  - Guest nationality tracking with flag display
+
+## 🛠️ Tech Stack
+
+- **Frontend**
+
+  - React 18
+  - TypeScript
+  - Tailwind CSS
+  - Shadcn UI for accessible components
+  - React Hook Form
+  - React Query for state management
+  - React Router for navigation
+
+- **Backend**
+
+  - Supabase for backend services
+  - Real-time data synchronization
+  - Secure authentication
+  - File storage for images
+
+- **Development Tools**
+  - Vite
+  - ESLint
+  - TypeScript
+  - Prettier
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/the-wild-oasis.git
+   cd the-wild-oasis
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env` file in the root directory:
+
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+---
+
+Built with 💚 by Umesh Tiruvalluru
