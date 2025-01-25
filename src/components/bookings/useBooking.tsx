@@ -23,7 +23,6 @@ const useBooking = () => {
   //Pagination
   const page = !searchParams.get("page") ? 1 : Number(searchParams.get("page"));
 
-  console.log(filter);
   const { data, isPending, error } = useQuery<BookingResponseProps>({
     queryKey: ["bookings", filter, page],
     queryFn: () => getBookings({ filter, page }),

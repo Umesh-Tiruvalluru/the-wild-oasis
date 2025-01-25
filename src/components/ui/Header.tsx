@@ -14,7 +14,7 @@ function Header() {
       <ul className="flex justify-end items-center gap-4">
         <li
           onClick={() => navigate("/account")}
-          className="flex flex-row gap-2 items-center font-semibold cursor-pointer justify-between"
+          className="flex flex-row gap-2 items-center font-semibold cursor-pointer justify-between  "
         >
           <SidebarTrigger className="block lg:hidden" />
           <Avatar>

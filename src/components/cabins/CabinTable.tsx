@@ -21,8 +21,6 @@ const CabinTable = () => {
     queryFn: getCabins,
   });
 
-  console.log(cabins);
-
   if (isPending) {
     return <Loader />;
   }
@@ -37,8 +35,6 @@ const CabinTable = () => {
 
   if (filterValue === "no-discount")
     filteredData = cabins?.filter((cabin) => cabin.discount === 0);
-
-  console.log(filteredData);
 
   return (
     <Table className="overflow-x-auto border">

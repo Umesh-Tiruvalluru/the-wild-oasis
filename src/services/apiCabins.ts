@@ -14,7 +14,6 @@ export async function getCabins() {
 //Edit Cabin
 export async function editCabin(newCabin: EditFormData) {
   if (typeof newCabin.image === "string") {
-    console.log(newCabin);
     const { data, error } = await supabase
       .from("cabins")
       .update(newCabin)
@@ -24,7 +23,6 @@ export async function editCabin(newCabin: EditFormData) {
       throw new Error("cannot update the cabin");
     }
 
-    console.log("editCabin successful", data);
     return data;
   }
 
@@ -55,7 +53,6 @@ export async function editCabin(newCabin: EditFormData) {
     throw new Error("Image could not be added");
   }
 
-  console.log("EditCabin successful:", data);
   return data;
 }
 

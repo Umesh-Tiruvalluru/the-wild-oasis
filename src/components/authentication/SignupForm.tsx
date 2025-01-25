@@ -56,7 +56,7 @@ const SignupForm = () => {
       className="space-y-4 dark:bg-zinc-900 bg-white rounded-lg pt-10 pb-5 px-5 mt-6"
     >
       <div className="flex items-center justify-between max-w-[510px] gap-28">
-        <Label className="shrink-0 w-36" htmlFor="fullName">
+        <Label className="shrink-0" htmlFor="fullName">
           Full Name
         </Label>
         <div className="flex flex-col w-full">
@@ -74,7 +74,7 @@ const SignupForm = () => {
         </div>
       </div>
       <div className="flex items-center justify-between max-w-[510px] gap-28">
-        <Label className="shrink-0 w-36" htmlFor="email">
+        <Label className="shrink-0" htmlFor="email">
           Email
         </Label>
         <div className="flex flex-col w-full">
@@ -93,7 +93,7 @@ const SignupForm = () => {
       </div>
 
       <div className="flex items-center justify-between max-w-[510px] gap-28">
-        <Label className="shrink-0 w-36" htmlFor="password">
+        <Label className="shrink-0" htmlFor="password">
           Password
         </Label>
         <div className="flex flex-col w-full">
@@ -117,7 +117,7 @@ const SignupForm = () => {
         </div>
       </div>
       <div className="flex items-center justify-between max-w-[510px] gap-28">
-        <Label className="shrink-0 w-36" htmlFor="passwordConfirm">
+        <Label className="shrink-0" htmlFor="passwordConfirm">
           Confirm Password
         </Label>
         <div className="flex flex-col w-full">

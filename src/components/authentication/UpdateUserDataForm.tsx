@@ -18,7 +18,6 @@ function UpdateUserDataForm() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(fullName);
     if (avatar) {
       mutate({ fullName, avatar });
     } else {

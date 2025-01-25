@@ -3,17 +3,25 @@ import { useState, ChangeEvent } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import useLogin from "./useLogin";
+import useUser from "./useUser";
+import { Navigate } from "react-router-dom";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { mutate, isPending } = useLogin();
 
+  const { isAuthenticated } = useUser();
+
   function handleSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     mutate({ email, password });
     setEmail("");
     setPassword("");
+  }
+
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard" />;
   }
 
   return (

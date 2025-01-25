@@ -27,22 +27,18 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Routes>
-            <Route
-              element={
-                <ProtectedRoute>
-                  <Layout />
-                </ProtectedRoute>
-              }
-            >
-              <Route index element={<Navigate to="dashboard" replace />} />
-              <Route path="bookings" element={<Bookings />} />
-              <Route path="bookings/:bookingId" element={<Booking />} />
-              <Route path="checkin/:bookingId" element={<Checkin />} />
-              <Route path="dashboard" element={<Dashboard />} />
-              <Route path="cabins" element={<Cabins />} />
-              <Route path="users" element={<NewUsers />} />
-              <Route path="settings" element={<Settings />} />
-              <Route path="account" element={<Account />} />
+            <Route element={<Layout />}>
+              <Route element={<ProtectedRoute />}>
+                <Route index element={<Navigate to="dashboard" replace />} />
+                <Route path="bookings" element={<Bookings />} />
+                <Route path="bookings/:bookingId" element={<Booking />} />
+                <Route path="checkin/:bookingId" element={<Checkin />} />
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="cabins" element={<Cabins />} />
+                <Route path="users" element={<NewUsers />} />
+                <Route path="settings" element={<Settings />} />
+                <Route path="account" element={<Account />} />
+              </Route>
             </Route>
             <Route path="login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />

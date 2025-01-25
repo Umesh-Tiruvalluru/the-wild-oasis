@@ -42,7 +42,6 @@ const CreateCabinForm: React.FC<CreateCabinFormProps> = ({ handleClose }) => {
   });
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
     mutate(data);
   };
 

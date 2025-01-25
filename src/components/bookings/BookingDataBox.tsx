@@ -24,8 +24,6 @@ function BookingDataBox({ booking }: Booking) {
     guests: { fullName: guestName, email, country, countryFlag, nationalID },
   } = booking;
 
-  console.log(observations);
-
   return (
     <div className="border rounded-lg overflow-hidden shadow-md bg-gray-50">
       {/* Header */}

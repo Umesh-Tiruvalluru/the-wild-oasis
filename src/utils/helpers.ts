@@ -24,7 +24,6 @@ export const getToday = function (options: { end?: boolean } = {}) {
     today.setUTCHours(23, 59, 59, 999);
   else today.setUTCHours(0, 0, 0, 0);
 
-  console.log(today.toISOString());
   return today.toISOString();
 };
 
